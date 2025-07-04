@@ -1,1 +1,1 @@
-# modal-pop-up
+This is  a modal/pop up. I made it using html,css and javascript.

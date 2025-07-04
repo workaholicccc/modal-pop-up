@@ -1,0 +1,65 @@
+.mdl{
+    background-image: url(bg_modal.avif);
+    height:550px;
+    position: relative; /*so that I can change the position of elements inside this class*/
+}
+
+#open{  /*open button*/
+    position: absolute;   /*so that I can change this button's position*/
+    top:70%;
+    left:10%;
+    padding:30px 30px;
+    border-radius: 10px;
+    font-size: 2rem;
+    background: transparent;
+    color:beige;
+}
+
+.mdl_cont{
+    background-color: azure;
+    position: absolute;
+    top:50%;
+    left:45%;
+    padding:10px 20px;
+    border-radius: 5px;
+    width:120px;
+    height: 100px;
+    transform: translate(-50%,-50%);  /*centering horizontally */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    animation-name: animatemodal; /*for modal animation*/
+    animation-duration: .4s;
+}
+
+.close{  /*close button*/
+    color:red;
+    cursor: pointer;
+    font-size: 3rem;
+     
+}
+
+.scnd_part{  /*to make the modal content only appear when the switch is clicked*/
+    display:none;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: 1;
+
+}
+
+@keyframes animatemodal {   /*modal animation*/
+    from{
+        top:-300px;    /* Starts 300px above its final position */
+        opacity: 0;   /*transparent*/
+    }
+
+    to{
+        top:50%;      /* Ends at vertical center */
+        opacity: 1;  /*visible*/
+    }
+}s
